@@ -3,11 +3,11 @@ import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
 
-import vercel from '@astrojs/vercel/serverless';
+import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), markdoc(), keystatic()],
   output: 'hybrid',
-  adapter: vercel(),
+  adapter: netlify(),
 });
